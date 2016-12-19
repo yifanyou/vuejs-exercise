@@ -5,20 +5,28 @@
 <meta http-equiv='Content-Language' content='cn' />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width" />
-<title>hello vue</title>
+<title>01-v-for</title>
 </head>
 <body>
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
 
-	<div id="app">
-	  	<p>{{ message }}</p>
+	<div id="app-4">
+	  <ol>
+	    <li v-for="todo in todos">
+	      {{ todo.text }}
+	    </li>
+	  </ol>
 	</div>
 
 	<script type='text/javascript'>
-		var app = new Vue({
-		  el: '#app',
+		var app4 = new Vue({
+		  el: '#app-4',
 		  data: {
-		    message: 'Hello Vue.js!'
+		    todos: [
+		      { text: 'Learn JavaScript' },
+		      { text: 'Learn Vue' },
+		      { text: 'Build something awesome' }
+		    ]
 		  }
 		})
 	</script>
