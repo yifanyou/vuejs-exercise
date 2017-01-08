@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta http-equiv='Content-Language' content='cn' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<title>hello vue</title>
+</head>
+<body>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+	<div id="app">
+		<ul id="repeat-object" class="demo">
+		  <li v-for="value in object">
+		    {{ value }}
+		  </li>
+		</ul>
+	</div>
+
+	<script type='text/javascript'>
+		var app = new Vue({
+		  el: '#app',
+		  data: {
+		    object: {
+		      FirstName: 'John',
+		      LastName: 'Doe',
+		      Age: 30
+		    }
+		  }
+		})
+	</script>
+</body>
+</html>
